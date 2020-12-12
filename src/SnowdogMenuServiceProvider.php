@@ -1,6 +1,6 @@
 <?php
 
-namespace Rapidez\SnowdogMenu\SnowdogMenu;
+namespace Rapidez\SnowdogMenu;
 
 use Rapidez\SnowdogMenu\ViewComponents\SnowdogMenuComponent;
 use Illuminate\Support\Facades\Blade;
