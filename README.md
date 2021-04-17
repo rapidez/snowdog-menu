@@ -38,3 +38,7 @@ If you need more control you can publish the views as well with:
 ```
 php artisan vendor:publish --provider="Rapidez\SnowdogMenu\SnowdogMenuServiceProvider" --tag=views
 ```
+
+## License
+
+GNU General Public License v3. Please see [License File](LICENSE) for more information.
