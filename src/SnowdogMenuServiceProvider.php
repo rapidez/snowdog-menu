@@ -15,16 +15,16 @@ class SnowdogMenuServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/views', 'snowdogmenu');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'snowdogmenu');
 
         $this->publishes([
-            __DIR__.'/views' => resource_path('views/vendor/snowdogmenu'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/rapidez/snowdog-menu'),
         ], 'views');
 
-        $this->mergeConfigFrom(__DIR__.'/config/snowdogmenu.php', 'snowdogmenu');
+        $this->mergeConfigFrom(__DIR__.'/../config/snowdogmenu.php', 'snowdogmenu');
 
         $this->publishes([
-            __DIR__.'/config/snowdogmenu.php' => config_path('snowdogmenu.php'),
+            __DIR__.'/../config/snowdogmenu.php' => config_path('snowdogmenu.php'),
         ], 'config');
 
         Blade::component('snowdog-menu', SnowdogMenuComponent::class);
