@@ -2,10 +2,9 @@
 
 namespace Rapidez\SnowdogMenu\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Rapidez\Core\Models\Scopes\ForCurrentStoreScope;
 use Rapidez\Core\Models\Scopes\IsActiveScope;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
@@ -32,7 +31,7 @@ class Menu extends Model
     {
         parent::boot();
 
-        static::addGlobalScope(new IsActiveScope);
+        static::addGlobalScope(new IsActiveScope());
         static::addGlobalScope(new ForCurrentStoreScope('snowmenu_store'));
     }
 
