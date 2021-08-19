@@ -2,9 +2,9 @@
 
 namespace Rapidez\SnowdogMenu;
 
-use Rapidez\SnowdogMenu\ViewComponents\SnowdogMenuComponent;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Rapidez\SnowdogMenu\ViewComponents\SnowdogMenuComponent;
 
 class SnowdogMenuServiceProvider extends ServiceProvider
 {

@@ -37,6 +37,7 @@ class SnowdogMenuComponent extends Component
     {
         return $items->where('parent_id', $parentId)->map(function ($item) use ($items) {
             $item['children'] = $this->convertToMenuTree($items, $item->node_id);
+
             return $item;
         })->sortBy('position');
     }

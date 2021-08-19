@@ -38,24 +38,27 @@ class MenuItem extends Model
     {
         parent::boot();
 
-        static::addGlobalScope(new IsActiveScope);
+        static::addGlobalScope(new IsActiveScope());
     }
 
     /**
      * Get the menu item content.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public function getContentAttribute($value)
     {
         if ($this->type == 'category') {
             $category = Category::find($value);
-            return isset($category->url_path) ? '/' . $category->url_path : null;
+
+            return isset($category->url_path) ? '/'.$category->url_path : null;
         }
 
         if ($this->type == 'cms_block') {
             $block = Block::firstWhere('identifier', $value);
+
             return $block->content ?? null;
         }
 
