@@ -27,7 +27,7 @@ class SnowdogMenuComponent extends Component
                 : 'snowdogmenu::menu';
 
             return view($view, [
-                'items' => $this->convertToMenuTree($menu->items),
+                'items'      => $this->convertToMenuTree($menu->items),
                 'identifier' => $identifier,
             ])->render();
         });
