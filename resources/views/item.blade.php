@@ -1,8 +1,8 @@
-<li class="{{ config('snowdogmenu.classes.'.$loop->depth.'.li') }}">
+<li class="{{ config('snowdogmenu.'.$identifier.'.'.$loop->depth.'.li') }}">
     @if($item->type == 'wrapper')
         <div class="{{ $item->classes }}">
     @else
-        {{ $item->html($loop) }}
+        {{ $item->html($identifier, $loop) }}
     @endif
     @includeWhen($item->children->count(), 'snowdogmenu::menu', ['items' => $item->children])
     @if($item->type == 'wrapper')

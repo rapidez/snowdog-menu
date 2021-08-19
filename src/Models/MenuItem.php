@@ -2,11 +2,12 @@
 
 namespace Rapidez\SnowdogMenu\Models;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\View;
 use Rapidez\Core\Models\Block;
 use Rapidez\Core\Models\Category;
 use Rapidez\Core\Models\Scopes\IsActiveScope;
 use Rapidez\Core\Models\Traits\HasContentAttributeWithVariables;
-use Illuminate\Database\Eloquent\Model;
 
 class MenuItem extends Model
 {
@@ -64,14 +65,20 @@ class MenuItem extends Model
     /**
      * Get the menu item html.
      *
+     * @param  string  $identifier
      * @param  object  $loop
      * @return string
      */
-    public function html(object $loop)
+    public function html(string $identifier, object $loop)
     {
-        return view('snowdogmenu::item.' . $this->type, [
+        $view = View::exists('snowdog-menu.'.$identifier.'.item.'.$this->type)
+            ? 'snowdog-menu.'.$identifier.'.item.'.$this->type
+            : 'snowdogmenu::item.'.$this->type;
+
+        return view($view, [
             'item' => $this,
             'loop' => $loop,
+            'identifier' => $identifier,
         ]);
     }
 }

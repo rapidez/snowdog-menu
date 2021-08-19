@@ -1,6 +1,6 @@
 <?php
 return [
-    'classes' => [
+    'main' => [
         1 => [
             'ul' => 'flex flex-wrap',
             'li' => 'group',
