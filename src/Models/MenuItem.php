@@ -65,8 +65,9 @@ class MenuItem extends Model
     /**
      * Get the menu item html.
      *
-     * @param  string  $identifier
-     * @param  object  $loop
+     * @param string $identifier
+     * @param object $loop
+     *
      * @return string
      */
     public function html(string $identifier, object $loop)
@@ -76,8 +77,8 @@ class MenuItem extends Model
             : 'snowdogmenu::item.'.$this->type;
 
         return view($view, [
-            'item' => $this,
-            'loop' => $loop,
+            'item'       => $this,
+            'loop'       => $loop,
             'identifier' => $identifier,
         ]);
     }
