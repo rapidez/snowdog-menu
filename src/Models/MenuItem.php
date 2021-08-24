@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\View;
 use Rapidez\Core\Models\Block;
 use Rapidez\Core\Models\Category;
 use Rapidez\Core\Models\Scopes\IsActiveScope;
-use Rapidez\Core\Models\Traits\HasContentAttributeWithVariables;
 use Rapidez\Core\RapidezFacade as Rapidez;
 
 class MenuItem extends Model
