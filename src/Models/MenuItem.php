@@ -8,13 +8,10 @@ use Rapidez\Core\Models\Block;
 use Rapidez\Core\Models\Category;
 use Rapidez\Core\Models\Scopes\IsActiveScope;
 use Rapidez\Core\Models\Traits\HasContentAttributeWithVariables;
+use Rapidez\Core\RapidezFacade as Rapidez;
 
 class MenuItem extends Model
 {
-    use HasContentAttributeWithVariables {
-        HasContentAttributeWithVariables::getContentAttribute as parseVariables;
-    }
-
     /**
      * The primary key for the model.
      *
@@ -62,7 +59,7 @@ class MenuItem extends Model
             return $block->content ?? null;
         }
 
-        return $this->parseVariables($value);
+        return Rapidez::content($value);
     }
 
     /**
