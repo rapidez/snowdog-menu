@@ -37,7 +37,7 @@ class SnowdogMenuComponent extends Component
     {
         return $items->where('parent_id', $parentId)->map(function ($item) use ($items) {
             $item->parent = $items->where('node_id', $parentId)->first();
-            
+
             $item['children'] = $this->convertToMenuTree($items, $item->node_id);
 
             return $item;
