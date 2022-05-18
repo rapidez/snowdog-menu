@@ -24,24 +24,21 @@ If you haven't published the Rapidez views yet:
 php artisan vendor:publish --provider="Rapidez\Core\RapidezServiceProvider" --tag=views
 ```
 
-## Configuration
-
-You can change the classes with the configuration file by publishing it with:
-```
-php artisan vendor:publish --provider="Rapidez\SnowdogMenu\SnowdogMenuServiceProvider" --tag=config
-```
-The first key is the identifier so you can have different styling per menu. Keep in mind that if you're using TailwindCSS or running CSS purging with your own stack that the classes in this config file should be discoverable. So add it to the list of files!
-
 ## Views
 
-If you need more control you can publish the views as well with: 
+You can publish the views with: 
 ```
 php artisan vendor:publish --provider="Rapidez\SnowdogMenu\SnowdogMenuServiceProvider" --tag=views
 ```
 
-## Full control
+### Types
 
-Sometimes you have multiple menu's which need a different structure. In that case you can create a view in your project with this path: `resources/views/snowdog-menu/identifier/menu.blade.php` and include subviews with that same path from there.
+Currently there is only an anchor in the views as the category and custom url types are mostly used; but you can check the `$item->type` and do things conditionally with that, for example:
+```
+@if($item->type == 'cms_block')
+    @content($item->content)
+@endif
+```
 
 ## License
 

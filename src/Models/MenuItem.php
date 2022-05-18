@@ -60,25 +60,4 @@ class MenuItem extends Model
 
         return Rapidez::content($value);
     }
-
-    /**
-     * Get the menu item html.
-     *
-     * @param string $identifier
-     * @param object $loop
-     *
-     * @return string
-     */
-    public function html(string $identifier, object $loop)
-    {
-        $view = View::exists('snowdog-menu.'.$identifier.'.item.'.$this->type)
-            ? 'snowdog-menu.'.$identifier.'.item.'.$this->type
-            : 'snowdogmenu::item.'.$this->type;
-
-        return view($view, [
-            'item'       => $this,
-            'loop'       => $loop,
-            'identifier' => $identifier,
-        ]);
-    }
 }

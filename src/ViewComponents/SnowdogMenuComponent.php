@@ -22,11 +22,8 @@ class SnowdogMenuComponent extends Component
 
         return Cache::rememberForever('snowdogmenu.'.config('rapidez.store').'.'.$identifier, function () use ($identifier) {
             $menu = Menu::where('identifier', $identifier)->firstOrFail();
-            $view = View::exists('snowdog-menu.'.$identifier.'.menu')
-                ? 'snowdog-menu.'.$identifier.'.menu'
-                : 'snowdogmenu::menu';
 
-            return view($view, [
+            return view('snowdogmenu::level1', [
                 'items'      => $this->convertToMenuTree($menu->items),
                 'identifier' => $identifier,
             ])->render();
