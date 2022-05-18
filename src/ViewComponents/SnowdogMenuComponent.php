@@ -3,7 +3,6 @@
 namespace Rapidez\SnowdogMenu\ViewComponents;
 
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\View;
 use Illuminate\View\Component;
 use Rapidez\SnowdogMenu\Models\Menu;
 
