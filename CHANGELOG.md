@@ -1,6 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/org/repo/compare/0.4.1...master)
+## [Unreleased](https://github.com/org/repo/compare/0.5.0...master)
+
+## [0.5.0](https://github.com/org/repo/compare/0.4.1...0.5.0) - 2022-05-18
+
+### Changed
+
+- Complete refactor (9ec7ae7)
 
 ## [0.4.1](https://github.com/org/repo/compare/0.4.0...0.4.1) - 2022-04-12
 
