@@ -18,7 +18,7 @@ class SnowdogMenuServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'snowdogmenu');
 
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/rapidez/snowdog-menu'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/snowdogmenu'),
         ], 'views');
 
         Blade::component('snowdog-menu', SnowdogMenuComponent::class);
