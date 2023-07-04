@@ -1,7 +1,7 @@
 <ul class="flex flex-wrap">
     @foreach ($items as $item)
         <li class="group">
-            <a class="block p-3 text-primary font-bold {{ $item->classes }}" href="{{ to($item->content) }}">
+            <a class="block p-3 text-primary font-bold {{ $item->classes }}" href="{{ url($item->content) }}">
                 {{ $item->title }}
             </a>
             @includeWhen($item->children->count(), 'snowdogmenu::level2', ['items' => $item->children])
