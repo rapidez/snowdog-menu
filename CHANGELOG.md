@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/snowdog-menu/compare/0.5.2...master)
+[Unreleased changes](https://github.com/rapidez/snowdog-menu/compare/0.6.0...master)
+## [0.6.0](https://github.com/rapidez/snowdog-menu/releases/tag/0.6.0) - 2023-07-13
+
+### Added
+
+- Possibility to have views per identifier (#6)
+
 ## [0.5.2](https://github.com/rapidez/snowdog-menu/releases/tag/0.5.2) - 2023-07-04
 
 ### Fixed
