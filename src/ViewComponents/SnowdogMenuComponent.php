@@ -3,6 +3,7 @@
 namespace Rapidez\SnowdogMenu\ViewComponents;
 
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\View;
 use Illuminate\View\Component;
 use Rapidez\SnowdogMenu\Models\Menu;
 
@@ -22,7 +23,7 @@ class SnowdogMenuComponent extends Component
         return Cache::rememberForever('snowdogmenu.'.config('rapidez.store').'.'.$identifier, function () use ($identifier) {
             $menu = Menu::where('identifier', $identifier)->firstOrFail();
 
-            return view('snowdogmenu::level1', [
+            return View::first(['snowdogmenu::'.$identifier.'.level1', 'snowdogmenu::level1'], [
                 'items'      => $this->convertToMenuTree($menu->items),
                 'identifier' => $identifier,
             ])->render();
