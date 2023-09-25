@@ -1,6 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/org/repo/compare/0.4.0...master)
+## [Unreleased](https://github.com/org/repo/compare/0.4.2...0.4.x)
+
+## [0.4.2](https://github.com/org/repo/compare/0.4.0...0.4.2) - 2023-09-22
+
+### Added
+
+- Laravel 10 support (c259e63)
 
 ## [0.4.0](https://github.com/org/repo/compare/0.3.0...0.4.0) - 2022-04-11
 
