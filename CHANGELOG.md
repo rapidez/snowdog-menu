@@ -1,6 +1,18 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/snowdog-menu/compare/0.6.0...master)
+[Unreleased changes](https://github.com/rapidez/snowdog-menu/compare/0.6.1...master)
+## [0.6.1](https://github.com/rapidez/snowdog-menu/releases/tag/0.6.1) - 2023-09-25
+
+### Added
+
+- Laravel 10 support (56adc9c)
+
+## [0.4.2](https://github.com/rapidez/snowdog-menu/releases/tag/0.4.2) - 2023-09-22
+
+### Added
+
+- Laravel 10 support (c259e63)
+
 ## [0.6.0](https://github.com/rapidez/snowdog-menu/releases/tag/0.6.0) - 2023-07-13
 
 ### Added
