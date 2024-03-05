@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/snowdog-menu/compare/0.6.1...master)
+[Unreleased changes](https://github.com/rapidez/snowdog-menu/compare/1.0.0...master)
+## [1.0.0](https://github.com/rapidez/snowdog-menu/releases/tag/1.0.0) - 2024-03-05
+
+### Added
+
+- Rapidez v2 support (#7)
+
 ## [0.6.1](https://github.com/rapidez/snowdog-menu/releases/tag/0.6.1) - 2023-09-25
 
 ### Added
